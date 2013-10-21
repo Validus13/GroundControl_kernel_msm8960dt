@@ -1600,7 +1600,13 @@ config CPU_OVERCLOCK_ULTIMATE
         default n
         help
           Krait overclocking up to 2.1 GHz
-
+		  
+config INTELLI_PLUG
+	bool "Enable intelli-plug cpu hotplug driver"
+	default n
+	help
+	  Generic Intelli-plug cpu hotplug driver for ARM SOCs
+		  
 config TURBO_BOOST
 	bool "Enable CPU Turbo boost option"
 	depends on CPU_OVERCLOCK
