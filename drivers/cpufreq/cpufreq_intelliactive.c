@@ -1268,14 +1268,15 @@ cpufreq_interactive_boost();
 
 static int input_dev_filter(const char *input_dev_name)
 {
-if (strstr(input_dev_name, "touchscreen") ||
-strstr(input_dev_name, "touch_dev") ||
-strstr(input_dev_name, "sec-touchscreen") ||
-strstr(input_dev_name, "keypad")) {
-return 0;
-} else {
-return 1;
-}
+	if (strstr(input_dev_name, "touchscreen") ||
+	    strstr(input_dev_name, "synaptics_dsx_i2c") ||
+	    strstr(input_dev_name, "touch_dev") ||
+	    strstr(input_dev_name, "sec-touchscreen") ||
+	    strstr(input_dev_name, "keypad")) {
+		return 0;
+	} else {
+		return 1;
+	}
 }
 
 
